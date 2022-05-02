@@ -1,10 +1,17 @@
 import axios from "axios";
-import { useState } from 'react';
+import { useState,useEffect} from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom'
 export const NewOrder = () => {
   // Get data of only this user. store it in redux
   // GET /orders?owner_name=john will give you all order of user john
   //  on submit click create a new order, new order has status `Not Accepted`
-  const [orders,setOrders]=useState()
+  const [orders,setOrders]=useState({})
+  // useEffect(() =>{
+  //   axios.get('http://localhost:8080/users', login).then(({ data }) => {
+  //   console.log('data:', data);
+  // });
+  // })
   // axios.get('http://localhost:8080/users', login).then(({ data }) => {
   //   console.log('data:', data);
   // });
